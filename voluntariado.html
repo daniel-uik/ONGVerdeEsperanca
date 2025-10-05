@@ -36,6 +36,7 @@
             <p>Preencha o formulário abaixo para participar dos nossos projetos como voluntário.</p>
             <form action="#" method="post" class="voluntariado-form">
                 <fieldset>
+                    <legend>Dados Pessoais</legend>
                     <label for="nome">Nome Completo:</label>
                     <input type="text" id="nome" name="nome" required>
 
@@ -55,7 +56,34 @@
 
                     <label for="cep">CEP:</label>
                     <input type="text" id="cep" name="cep" required pattern="^\d{5}-\d{3}$" placeholder="00000-000">
+                </fieldset>
 
+                <fieldset>
+                    <legend>Habilidades</legend>
+                    <label for="habilidades">Quais habilidades você possui?</label>
+                    <input type="text" id="habilidades" name="habilidades"
+                        placeholder="Ex: Comunicação, Liderança, Informática" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Disponibilidade</legend>
+                    <label for="disponibilidade">Dias disponíveis:</label>
+                    <select id="disponibilidade" name="disponibilidade[]" multiple required>
+                        <option value="segunda">Segunda-feira</option>
+                        <option value="terca">Terça-feira</option>
+                        <option value="quarta">Quarta-feira</option>
+                        <option value="quinta">Quinta-feira</option>
+                        <option value="sexta">Sexta-feira</option>
+                        <option value="sabado">Sábado</option>
+                        <option value="domingo">Domingo</option>
+                    </select>
+
+                    <label for="horario">Horário disponível:</label>
+                    <input type="text" id="horario" name="horario" placeholder="Ex: Manhã, Tarde, Noite" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interesse</legend>
                     <label for="area">Área de Interesse:</label>
                     <select id="area" name="area" required>
                         <option value="">Selecione</option>
@@ -67,9 +95,9 @@
 
                     <label for="mensagem">Por que deseja ser voluntário?</label>
                     <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-                    <button type="submit">Enviar</button>
                 </fieldset>
+
+                <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
