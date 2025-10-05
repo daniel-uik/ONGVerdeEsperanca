@@ -32,7 +32,43 @@
 
     <main>
         <section>
+            <h1>Seja um Voluntário</h1>
+            <p>Preencha o formulário abaixo para participar dos nossos projetos como voluntário.</p>
+            <form action="#" method="post" class="voluntariado-form">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
 
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required pattern="^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$"
+                    placeholder="(99) 99999-9999">
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+                    placeholder="000.000.000-00">
+
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required pattern="^\d{5}-\d{3}$" placeholder="00000-000">
+
+                <label for="area">Área de Interesse:</label>
+                <select id="area" name="area" required>
+                    <option value="">Selecione</option>
+                    <option value="educacao">Educação Ambiental</option>
+                    <option value="projetos">Projetos Sustentáveis</option>
+                    <option value="comunicacao">Comunicação</option>
+                    <option value="eventos">Eventos</option>
+                </select>
+
+                <label for="mensagem">Por que deseja ser voluntário?</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
     <footer>
