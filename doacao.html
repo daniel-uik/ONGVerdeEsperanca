@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ONG Verde Esperança - Faça sua doação e ajude nossos projetos ambientais.">
+    <meta name="author" content="Daniel Alves - https://danieluik.web.app">
+    <title>ONG Verde Esperança - Doação</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-titulo">
+            <img src="assets/img/logo.png" alt="Logo Verde Esperança">
+            <h1>Verde Esperança</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="projetos.html">Projetos Sociais</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="doacao.html" class="ativo">Doação</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero hero-doacao">
+        <div class="conteudo-hero">
+            <h2>Contribua para um futuro mais verde 🌳</h2>
+            <p>Sua doação faz a diferença! Ajude a ONG Verde Esperança a continuar seus projetos de preservação
+                ambiental e educação ecológica.</p>
+        </div>
+    </section>
+
+    <main class="main-doacao">
+        <section class="doacao-container">
+            <div class="doacao-valores">
+                <h3>1. Escolha o valor da doação</h3>
+                <div class="valores-grid">
+                    <button class="valor-btn" data-valor="25">R$ 25</button>
+                    <button class="valor-btn" data-valor="50">R$ 50</button>
+                    <button class="valor-btn" data-valor="100">R$ 100</button>
+                    <button class="valor-btn outro">Outro valor</button>
+                </div>
+                <input type="number" id="outroValor" placeholder="R$ 0,00" class="outro-valor" />
+                <p class="transparencia">💚 100% transparente — acompanhe o destino da sua doação no nosso <a href="#"
+                        class="link-verde">Portal de Transparência</a>.</p>
+            </div>
+
+            <div class="doacao-form">
+                <h3>2. Finalize sua contribuição</h3>
+                <form id="formDoacao">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="metodo">Método de pagamento</label>
+                    <select id="metodo" name="metodo" required>
+                        <option value="pix">PIX (imediato)</option>
+                        <option value="cartao">Cartão de Crédito</option>
+                        <option value="boleto">Boleto Bancário</option>
+                    </select>
+
+                    <button type="submit" class="btn-verde">Confirmar Doação</button>
+                    <p class="seguro">🔒 Sua doação é 100% segura e criptografada.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="modalConfirmacao" class="modal">
+        <div class="modal-content">
+            <span class="fechar">&times;</span>
+            <h2>🎉 Doação Confirmada!</h2>
+            <p>Obrigado por apoiar a Verde Esperança! Sua contribuição ajuda a manter nossos projetos ambientais ativos.
+            </p>
+            <a href="index.html" class="btn-verde">Voltar à Página Inicial</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <section class="footer-conteudo">
+            <article class="footer-sobre">
+                <h4>Sobre Nós</h4>
+                <p>
+                    A ONG Verde Esperança atua desde 2018 com projetos ambientais, reflorestamento e educação ecológica
+                    para comunidades.
+                </p>
+            </article>
+
+            <article class="footer-contato">
+                <h4>Contato</h4>
+                <p>Email: <a href="mailto:contato@verdeesperanca.org">contato@verdeesperanca.org</a></p>
+                <p>Telefone: (11) 99999-9999</p>
+                <p>Endereço: Rua das Árvores, 45 - São Paulo/SP</p>
+            </article>
+
+            <article class="footer-redes">
+                <h4>Redes Sociais</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </article>
+
+            <article class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="projetos.html">Projetos Sociais</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="doacao.html">Doação</a></li>
+                </ul>
+            </article>
+        </section>
+
+        <div class="footer-copy">
+            <small>&copy; 2025 ONG Verde Esperança. Todos os direitos reservados.</small>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('formDoacao');
+        const modal = document.getElementById('modalConfirmacao');
+        const fechar = document.querySelector('.fechar');
+        const outroBtn = document.querySelector('.valor-btn.outro');
+        const outroValor = document.getElementById('outroValor');
+        const valorBtns = document.querySelectorAll('.valor-btn');
+
+        valorBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                valorBtns.forEach(b => b.classList.remove('ativo'));
+                btn.classList.add('ativo');
+                if (btn.classList.contains('outro')) {
+                    outroValor.style.display = 'block';
+                } else {
+                    outroValor.style.display = 'none';
+                    outroValor.value = btn.dataset.valor;
+                }
+            });
+        });
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            modal.style.display = 'flex';
+            form.reset();
+            valorBtns.forEach(b => b.classList.remove('ativo'));
+            outroValor.style.display = 'none';
+        });
+
+        fechar.addEventListener('click', () => modal.style.display = 'none');
+        window.addEventListener('click', e => {
+            if (e.target === modal) modal.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

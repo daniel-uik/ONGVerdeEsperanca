@@ -9,84 +9,143 @@
     <meta name="author" content="Daniel Alves - https://danieluik.web.app">
     <meta name="keywords"
         content="ONG, meio ambiente, sustentabilidade, educação ambiental, projetos sociais, voluntariado, doações, transparência, blog, notícias ambientais">
-    <title>ONG Verde Esperança - Preservação Ambiental</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <title>ONG Verde Esperança</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
+        <div class="logo-titulo">
+            <img src="assets/img/logo.png" alt="Logo Verde Esperança">
+            <h1>Verde Esperança</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="index.html" class="ativo">Página Inicial</a></li>
                 <li><a href="projetos.html">Projetos Sociais</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="doacao.html">Doação</a></li>
             </ul>
         </nav>
     </header>
 
+
+    <section class="hero">
+        <h2>Preservar o presente é garantir o futuro 🌱</h2>
+        <p>Conectamos pessoas e comunidades em ações que promovem o equilíbrio entre o homem e a natureza.</p>
+        <a href="projetos.html" class="btn">Ver nossos projetos</a>
+    </section>
+
     <main>
-        <section class="hero">
-            <h1>Bem-vindo à ONG Verde Esperança</h1>
-            <img src="assets/img/ong-verde-esperanca.png" alt="ONG Verde Esperança - Natureza">
-            <p>
-            A ONG Verde Esperança atua na preservação ambiental, promovendo educação ecológica e ações sustentáveis para proteger o meio ambiente.
-            </p>
-        </section>
-        <section>
-            <h2>Ações em Destaque</h2>
-            <ul>
-                <li>
-                    <strong>Reflorestamento de áreas degradadas:</strong>
-                    Realizamos o plantio de mudas nativas em regiões afetadas pelo desmatamento, promovendo a recuperação da biodiversidade e a proteção dos recursos hídricos.
-                </li>
-                <li>
-                    <strong>Campanhas de reciclagem nas escolas:</strong>
-                    Desenvolvemos atividades educativas e oficinas para incentivar alunos e professores a adotarem práticas de reciclagem e redução de resíduos.
-                </li>
-                <li>
-                    <strong>Palestras sobre consumo consciente:</strong>
-                    Organizamos eventos e palestras para conscientizar a comunidade sobre a importância de escolhas sustentáveis no dia a dia, reduzindo o impacto ambiental.
-                </li>
-            </ul>
-        </section>
-        <section class="projects">
-            <div class="header">
-                <h2>Nossos Projetos</h2>
-                <img src="assets/img/projetos.png" alt="Projetos ONG Verde Esperança">
-            </div>
-            <p>Conheça os projetos sociais e ambientais que desenvolvemos para promover a sustentabilidade e a preservação do meio ambiente.</p>
-            <a href="projetos.html">Ver Projetos</a>
-        </section>
-        <section class="values">
-            <div>
-                <img src="assets/img/alvo.png" alt="Missão">
-                <h3>Missão</h3>
-                <p>Conscientizar e engajar a sociedade na defesa da natureza, realizando projetos de reflorestamento, reciclagem e conservação de recursos naturais.</p>
-            </div>
-            <div>
-                <img src="assets/img/visao.png" alt="Visão">
-                <h3>Visão</h3>
-                <p>Ser referência nacional em educação ambiental e sustentabilidade, promovendo mudanças positivas para o planeta e inspirando novas gerações.</p>
-            </div>
-            <div>
-                <img src="assets/img/valor.png" alt="Valores">
-                <h3>Valores</h3>
-                <p>Transparência, respeito à natureza, colaboração, responsabilidade social e compromisso com a ética ambiental.</p>
+        <section class="missao-visao-valores">
+            <h3>Missão, Visão e Valores</h3>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/img/alvo.png" alt="Missão">
+                    <h4>Missão</h4>
+                    <p>Promover a conscientização ambiental e a sustentabilidade por meio de projetos sociais e
+                        educativos.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/img/visao.png" alt="Visão">
+                    <h4>Visão</h4>
+                    <p>Ser referência em educação ambiental e recuperação de áreas degradadas em todo o Brasil.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/img/valor.png" alt="Valores">
+                    <h4>Valores</h4>
+                    <p>Ética, transparência, solidariedade, amor à natureza e compromisso com as futuras gerações.</p>
+                </div>
             </div>
         </section>
-        <section class="participe">
-            <div class="header">
-                <h2>Participe!</h2>
-                <img src="assets/img/voluntario.png" alt="Voluntário ONG Verde Esperança">
+
+        <section class="sobre-nos">
+            <h3>Sobre a Verde Esperança</h3>
+            <div class="conteudo-sobre">
+                <p>
+                    A Verde Esperança é uma ONG dedicada à preservação ambiental e à conscientização ecológica.
+                    Atuamos desde 2018 promovendo projetos que unem educação, sustentabilidade e amor à natureza.
+                    Nosso objetivo é inspirar pessoas a se tornarem agentes de mudança para um planeta mais verde e
+                    saudável.
+                </p>
             </div>
-            <p>Seja voluntário, apoie nossas campanhas ou conheça nossos projetos. Juntos podemos preservar o planeta!</p>
-            <a href="cadastro.html">Quero ser voluntário</a>
         </section>
+
+        <section class="acoes-destaque">
+            <h3>Ações em Destaque</h3>
+            <div class="cards">
+                <div class="card sem-imagem">
+                    <h4>Mutirão Verde</h4>
+                    <p>Voluntários se unem mensalmente para limpeza de praças e parques urbanos.</p>
+                </div>
+                <div class="card sem-imagem">
+                    <h4>Escolas Sustentáveis</h4>
+                    <p>Capacitação de professores e alunos para práticas ecológicas no ambiente escolar.</p>
+                </div>
+                <div class="card sem-imagem">
+                    <h4>Campanha “Adote uma Árvore”</h4>
+                    <p>Incentivo à população para plantar e cuidar de árvores em suas comunidades.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="doacao-chamada">
+            <div class="conteudo-doacao">
+                <h3>Ajude Nossa Causa 💚</h3>
+                <p>
+                    Sua doação faz a diferença! Contribua para nossos projetos de preservação ambiental e educação
+                    ecológica.
+                    Com pequenas ações, criamos grandes impactos na natureza e na vida de todos.
+                </p>
+                <a href="doacao.html" class="btn-doacao">Fazer uma Doação</a>
+            </div>
+        </section>
+
     </main>
-    <footer>
-        <p>&copy; Desenvolvido por <a href="https://danieluik.web.app" target="_blank">Daniel Alves</a>. Todos os
-            direitos reservados.</p>
+
+    <footer class="footer">
+        <section class="footer-conteudo">
+            <article class="footer-sobre">
+                <h4>Sobre Nós</h4>
+                <p>
+                    A ONG Verde Esperança atua desde 2018 com projetos ambientais, reflorestamento e educação ecológica
+                    para comunidades.
+                </p>
+            </article>
+
+            <article class="footer-contato">
+                <h4>Contato</h4>
+                <p>Email: <a href="mailto:contato@verdeesperanca.org">contato@verdeesperanca.org</a></p>
+                <p>Telefone: (11) 99999-9999</p>
+                <p>Endereço: Rua das Árvores, 45 - São Paulo/SP</p>
+            </article>
+
+            <article class="footer-redes">
+                <h4>Redes Sociais</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </article>
+
+            <article class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="projetos.html">Projetos Sociais</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="doacao.html">Doação</a></li>
+                </ul>
+            </article>
+        </section>
+
+        <div class="footer-copy">
+            <small>&copy; 2025 ONG Verde Esperança. Todos os direitos reservados.</small>
+        </div>
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
