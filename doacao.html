@@ -12,12 +12,14 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#maincontent">Pular para o conteúdo</a>
+
     <header>
         <div class="logo-titulo">
             <img src="./assets/img/logo.png" alt="Logo Verde Esperança">
             <h1>Verde Esperança</h1>
         </div>
-        <nav>
+        <nav role="navigation" aria-label="Navegação principal">
             <ul>
                 <li><a href="./index.html">Página Inicial</a></li>
                 <li><a href="./projetos.html">Projetos Sociais</a></li>
@@ -27,7 +29,7 @@
         </nav>
     </header>
 
-    <section class="hero hero-doacao">
+    <section class="hero hero-doacao" aria-labelledby="hero-doacao-title">
         <div class="conteudo-hero">
             <h2>Contribua para um futuro mais verde 🌳</h2>
             <p>Sua doação faz a diferença! Ajude a ONG Verde Esperança a continuar seus projetos de preservação
@@ -35,8 +37,8 @@
         </div>
     </section>
 
-    <main class="main-doacao">
-        <section class="doacao-container">
+    <main class="main-doacao" id="maincontent" role="main">
+        <section class="doacao-container" aria-labelledby="doacao-title">
             <div class="doacao-valores">
                 <h3>1. Escolha o valor da doação</h3>
                 <div class="valores-grid">
@@ -51,7 +53,7 @@
                 <img src="./assets/img/doacao.jpg" alt="Selo de Transparência" class="selo-transparencia" style="display:block; width:320px; max-width:100%; margin:16px auto 0;">
             </div>
 
-            <div class="doacao-form">
+            <div class="doacao-form" aria-labelledby="form-doacao-title">
                 <h3>2. Finalize sua contribuição</h3>
                 <form id="formDoacao">
                     <label for="nome">Nome completo</label>
@@ -75,7 +77,7 @@
     </main>
 
     <div id="modalConfirmacao" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-desc">
             <span class="fechar">&times;</span>
             <h2>🎉 Doação Confirmada!</h2>
             <p>Obrigado por apoiar a Verde Esperança! Sua contribuição ajuda a manter nossos projetos ambientais ativos.
@@ -84,7 +86,7 @@
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo" aria-label="Rodapé">
         <section class="footer-conteudo">
             <article class="footer-sobre">
                 <h4>Sobre Nós</h4>
@@ -101,12 +103,12 @@
                 <p>Endereço: Rua das Árvores, 45 - São Paulo/SP</p>
             </article>
 
-            <article class="footer-redes">
+            <article class="footer-redes" aria-label="Redes sociais">
                 <h4>Redes Sociais</h4>
                 <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#" aria-label="Instagram da Verde Esperança">Instagram</a></li>
+                    <li><a href="#" aria-label="Facebook da Verde Esperança">Facebook</a></li>
+                    <li><a href="#" aria-label="YouTube da Verde Esperança">YouTube</a></li>
                 </ul>
             </article>
 

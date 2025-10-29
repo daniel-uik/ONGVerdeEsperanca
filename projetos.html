@@ -13,15 +13,18 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#maincontent">Pular para o conteúdo</a>
+
     <header>
         <div class="logo-titulo">
-            <img src="./assets/img/logo.png" alt="Logo Verde Esperança">
+            <img src="./assets/img/logo.png" alt="Logo ONG Verde Esperança" width="72" height="72">
             <h1>Verde Esperança</h1>
         </div>
-        <nav>
+
+        <nav role="navigation" aria-label="Navegação principal">
             <ul>
                 <li><a href="./index.html">Página Inicial</a></li>
-                <li><a href="./projetos.html" class="ativo">Projetos Sociais</a></li>
+                <li><a href="./projetos.html" class="ativo" aria-current="page">Projetos Sociais</a></li>
                 <li><a href="./cadastro.html">Cadastro</a></li>
                 <li><a href="./doacao.html">Doação</a></li>
             </ul>
@@ -68,7 +71,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo" aria-label="Rodapé">
         <section class="footer-conteudo">
             <article class="footer-sobre">
                 <h4>Sobre Nós</h4>
@@ -85,12 +88,12 @@
                 <p>Endereço: Rua das Árvores, 45 - São Paulo/SP</p>
             </article>
 
-            <article class="footer-redes">
+            <article class="footer-redes" aria-label="Redes sociais">
                 <h4>Redes Sociais</h4>
                 <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#" aria-label="Instagram da Verde Esperança">Instagram</a></li>
+                    <li><a href="#" aria-label="Facebook da Verde Esperança">Facebook</a></li>
+                    <li><a href="#" aria-label="YouTube da Verde Esperança">YouTube</a></li>
                 </ul>
             </article>
 

@@ -65,3 +65,4 @@ mask(document.getElementById('cpf'), '###.###.###-##');
 mask(document.getElementById('telefone'), '(##) #####-####');
 mask(document.getElementById('cep'), '#####-###');
 mask(document.getElementById('dataNascimento'), '##/##/####');
+

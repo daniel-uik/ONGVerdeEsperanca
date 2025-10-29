@@ -15,15 +15,17 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#maincontent">Pular para o conteúdo</a>
+
     <header>
         <div class="logo-titulo">
-            <img src="./assets/img/logo.png" alt="Logo Verde Esperança">
+            <img src="./assets/img/logo.png" alt="Logo ONG Verde Esperança" width="72" height="72">
             <h1>Verde Esperança</h1>
         </div>
 
-        <nav>
+        <nav role="navigation" aria-label="Navegação principal">
             <ul>
-                <li><a href="./index.html" class="ativo">Página Inicial</a></li>
+                <li><a href="./index.html" class="ativo" aria-current="page">Página Inicial</a></li>
                 <li><a href="./projetos.html">Projetos Sociais</a></li>
                 <li><a href="./cadastro.html">Cadastro</a></li>
                 <li><a href="./doacao.html">Doação</a></li>
@@ -31,38 +33,37 @@
         </nav>
     </header>
 
-
-    <section class="hero">
-        <h2>Preservar o presente é garantir o futuro 🌱</h2>
+    <section class="hero" aria-labelledby="hero-title">
+        <h2 id="hero-title">Preservar o presente é garantir o futuro 🌱</h2>
         <p>Conectamos pessoas e comunidades em ações que promovem o equilíbrio entre o homem e a natureza.</p>
         <a href="./projetos.html" class="btn">Ver nossos projetos</a>
     </section>
 
-    <main>
-        <section class="missao-visao-valores">
-            <h3>Missão, Visão e Valores</h3>
+    <main id="maincontent" role="main">
+        <section class="missao-visao-valores" aria-labelledby="mv-title">
+            <h3 id="mv-title">Missão, Visão e Valores</h3>
             <div class="cards">
-                <div class="card">
-                    <img src="./assets/img/alvo.png" alt="Missão">
-                    <h4>Missão</h4>
+                <article class="card" aria-labelledby="missao">
+                    <img src="./assets/img/alvo.png" alt="Ícone missão">
+                    <h4 id="missao">Missão</h4>
                     <p>Promover a conscientização ambiental e a sustentabilidade por meio de projetos sociais e
                         educativos.</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/img/visao.png" alt="Visão">
-                    <h4>Visão</h4>
+                </article>
+                <article class="card" aria-labelledby="visao">
+                    <img src="./assets/img/visao.png" alt="Ícone visão">
+                    <h4 id="visao">Visão</h4>
                     <p>Ser referência em educação ambiental e recuperação de áreas degradadas em todo o Brasil.</p>
-                </div>
-                <div class="card">
-                    <img src="./assets/img/valor.png" alt="Valores">
-                    <h4>Valores</h4>
+                </article>
+                <article class="card" aria-labelledby="valores">
+                    <img src="./assets/img/valor.png" alt="Ícone valores">
+                    <h4 id="valores">Valores</h4>
                     <p>Ética, transparência, solidariedade, amor à natureza e compromisso com as futuras gerações.</p>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section class="sobre-nos">
-            <h3>Sobre a Verde Esperança</h3>
+        <section class="sobre-nos" aria-labelledby="sobre-title">
+            <h3 id="sobre-title">Sobre a Verde Esperança</h3>
             <div class="conteudo-sobre">
                 <p>
                     A Verde Esperança é uma ONG dedicada à preservação ambiental e à conscientização ecológica.
@@ -73,27 +74,27 @@
             </div>
         </section>
 
-        <section class="acoes-destaque">
-            <h3>Ações em Destaque</h3>
+        <section class="acoes-destaque" aria-labelledby="acoes-title">
+            <h3 id="acoes-title">Ações em Destaque</h3>
             <div class="cards">
-                <div class="card sem-imagem">
+                <div class="card sem-imagem" role="article">
                     <h4>Mutirão Verde</h4>
                     <p>Voluntários se unem mensalmente para limpeza de praças e parques urbanos.</p>
                 </div>
-                <div class="card sem-imagem">
+                <div class="card sem-imagem" role="article">
                     <h4>Escolas Sustentáveis</h4>
                     <p>Capacitação de professores e alunos para práticas ecológicas no ambiente escolar.</p>
                 </div>
-                <div class="card sem-imagem">
+                <div class="card sem-imagem" role="article">
                     <h4>Campanha “Adote uma Árvore”</h4>
                     <p>Incentivo à população para plantar e cuidar de árvores em suas comunidades.</p>
                 </div>
             </div>
         </section>
 
-        <section class="doacao-chamada">
+        <section class="doacao-chamada" aria-labelledby="doa-title">
             <div class="conteudo-doacao">
-                <h3>Ajude Nossa Causa 💚</h3>
+                <h3 id="doa-title">Ajude Nossa Causa 💚</h3>
                 <p>
                     Sua doação faz a diferença! Contribua para nossos projetos de preservação ambiental e educação
                     ecológica.
@@ -105,7 +106,7 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo" aria-label="Rodapé">
         <section class="footer-conteudo">
             <article class="footer-sobre">
                 <h4>Sobre Nós</h4>
@@ -122,12 +123,12 @@
                 <p>Endereço: Rua das Árvores, 45 - São Paulo/SP</p>
             </article>
 
-            <article class="footer-redes">
+            <article class="footer-redes" aria-label="Redes sociais">
                 <h4>Redes Sociais</h4>
                 <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#" aria-label="Instagram da Verde Esperança">Instagram</a></li>
+                    <li><a href="#" aria-label="Facebook da Verde Esperança">Facebook</a></li>
+                    <li><a href="#" aria-label="YouTube da Verde Esperança">YouTube</a></li>
                 </ul>
             </article>
 
@@ -146,6 +147,10 @@
             <small>&copy; 2025 ONG Verde Esperança. Todos os direitos reservados.</small>
         </div>
     </footer>
+
+    <!-- Região para anunciar alterações para leitores de tela -->
+    <div id="a11y-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
     <script src="./assets/js/script.js"></script>
 </body>
 
