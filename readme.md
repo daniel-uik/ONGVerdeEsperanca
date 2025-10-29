@@ -23,4 +23,4 @@ O projeto foi implementado conforme os requisitos e testado localmente. Principa
 - Estrutura semântica completa nas páginas index.html, projetos.html, cadastro.html (e doacao.html, quando presente): uso de header, nav, main, section, article, aside e footer; hierarquia de títulos consistente; imagens com atributos alt; menu de navegação entre páginas.
 - Testes realizados: execução em servidor local, navegação entre páginas, inspeção semântica, verificação de hierarquia de títulos e validação HTML no W3C Markup Validator — sem erros após correções.
 
-Link público do repositório: 
+Link público do repositório: https://github.com/daniel-uik/ONGVerdeEsperanca/tree/01-ATIVIDADE 
