@@ -21,7 +21,13 @@
             <h1>Verde Esperança</h1>
         </div>
 
-        <nav>
+        <div class="hamburguer" id="hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="menu">
             <ul>
                 <li><a href="./index.html" class="ativo">Página Inicial</a></li>
                 <li><a href="./projetos.html">Projetos Sociais</a></li>
@@ -146,6 +152,24 @@
             <small>&copy; 2025 ONG Verde Esperança. Todos os direitos reservados.</small>
         </div>
     </footer>
+
+    <script>
+        const hamburguer = document.getElementById('hamburguer');
+        const menu = document.getElementById('menu');
+
+        hamburguer.addEventListener('click', () => {
+            hamburguer.classList.toggle('ativo');
+            menu.classList.toggle('ativo');
+        });
+
+        document.querySelectorAll('#menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburguer.classList.remove('ativo');
+                menu.classList.remove('ativo');
+            });
+        });
+    </script>
+
 </body>
 
 </html>

@@ -79,6 +79,80 @@ body {
     min-height: 100vh;
 }
 
+/* ==== MENU HAMBÚRGUER ==== */
+.hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 28px;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 200;
+}
+
+.hamburguer span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--cor-primaria);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hamburguer.ativo span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburguer.ativo span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.ativo span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .hamburguer {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: var(--cor-clara);
+        box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+        transition: 0.4s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav.ativo {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    nav a {
+        font-size: 1.3rem;
+        color: var(--cor-primaria);
+    }
+
+    header {
+        position: relative;
+    }
+}
+
+
+
 
 /* ==== CABEÇALHO ==== */
 header {
