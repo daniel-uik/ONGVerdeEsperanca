@@ -8,12 +8,11 @@
     <meta name="author" content="Daniel Alves - https://danieluik.web.app">
     <title>ONG Verde Esperança - Doação</title>
     <link rel="icon" type="image/png" href="./assets/img/logo.png">
-    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <div class="logo-titulo">
+        <div>
             <img src="./assets/img/logo.png" alt="Logo Verde Esperança">
             <h1>Verde Esperança</h1>
         </div>
@@ -22,36 +21,36 @@
                 <li><a href="./index.html">Página Inicial</a></li>
                 <li><a href="./projetos.html">Projetos Sociais</a></li>
                 <li><a href="./cadastro.html">Cadastro</a></li>
-                <li><a href="./doacao.html" class="ativo">Doação</a></li>
+                <li><a href="./doacao.html">Doação</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero hero-doacao">
-        <div class="conteudo-hero">
+    <section>
+        <div>
             <h2>Contribua para um futuro mais verde 🌳</h2>
             <p>Sua doação faz a diferença! Ajude a ONG Verde Esperança a continuar seus projetos de preservação
                 ambiental e educação ecológica.</p>
         </div>
     </section>
 
-    <main class="main-doacao">
-        <section class="doacao-container">
-            <div class="doacao-valores">
+    <main>
+        <section>
+            <div>
                 <h3>1. Escolha o valor da doação</h3>
-                <div class="valores-grid">
-                    <button class="valor-btn" data-valor="25">R$ 25</button>
-                    <button class="valor-btn" data-valor="50">R$ 50</button>
-                    <button class="valor-btn" data-valor="100">R$ 100</button>
-                    <button class="valor-btn outro">Outro valor</button>
+                <div>
+                    <button type="button" data-valor="25">R$ 25</button>
+                    <button type="button" data-valor="50">R$ 50</button>
+                    <button type="button" data-valor="100">R$ 100</button>
+                    <button type="button" data-valor="outro">Outro valor</button>
                 </div>
-                <input type="number" id="outroValor" placeholder="R$ 0,00" class="outro-valor" />
-                <p class="transparencia">💚 100% transparente — acompanhe o destino da sua doação no nosso <a href="#"
-                        class="link-verde">Portal de Transparência</a>.</p>
-                <img src="./assets/img/doacao.jpg" alt="Selo de Transparência" class="selo-transparencia" style="display:block; width:320px; max-width:100%; margin:16px auto 0;">
+                <input type="number" id="outroValor" placeholder="R$ 0,00">
+                <p>💚 100% transparente — acompanhe o destino da sua doação no nosso <a href="#"
+                        >Portal de Transparência</a>.</p>
+                <img src="./assets/img/doacao.jpg" alt="Selo de Transparência" style="display:block; width:320px; max-width:100%; margin:16px auto 0;">
             </div>
 
-            <div class="doacao-form">
+            <div>
                 <h3>2. Finalize sua contribuição</h3>
                 <form id="formDoacao">
                     <label for="nome">Nome completo</label>
@@ -62,31 +61,21 @@
 
                     <label for="metodo">Método de pagamento</label>
                     <select id="metodo" name="metodo" required>
+                        <option value="" disabled selected>Selecione o método</option>
                         <option value="pix">PIX (imediato)</option>
                         <option value="cartao">Cartão de Crédito</option>
                         <option value="boleto">Boleto Bancário</option>
                     </select>
 
-                    <button type="submit" class="btn-verde">Confirmar Doação</button>
-                    <p class="seguro">🔒 Sua doação é 100% segura e criptografada.</p>
+                    <button type="submit">Confirmar Doação</button>
+                    <p>🔒 Sua doação é 100% segura e criptografada.</p>
                 </form>
             </div>
         </section>
     </main>
-
-    <div id="modalConfirmacao" class="modal">
-        <div class="modal-content">
-            <span class="fechar">&times;</span>
-            <h2>🎉 Doação Confirmada!</h2>
-            <p>Obrigado por apoiar a Verde Esperança! Sua contribuição ajuda a manter nossos projetos ambientais ativos.
-            </p>
-            <a href="./index.html" class="btn-verde">Voltar à Página Inicial</a>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <section class="footer-conteudo">
-            <article class="footer-sobre">
+    <footer>
+        <div>
+            <article>
                 <h4>Sobre Nós</h4>
                 <p>
                     A ONG Verde Esperança atua desde 2018 com projetos ambientais, reflorestamento e educação ecológica
@@ -94,14 +83,14 @@
                 </p>
             </article>
 
-            <article class="footer-contato">
+            <article>
                 <h4>Contato</h4>
                 <p>Email: <a href="mailto:contato@verdeesperanca.org">contato@verdeesperanca.org</a></p>
                 <p>Telefone: (11) 99999-9999</p>
                 <p>Endereço: Rua das Árvores, 45 - São Paulo/SP</p>
             </article>
 
-            <article class="footer-redes">
+            <article>
                 <h4>Redes Sociais</h4>
                 <ul>
                     <li><a href="#">Instagram</a></li>
@@ -110,7 +99,7 @@
                 </ul>
             </article>
 
-            <article class="footer-links">
+            <article>
                 <h4>Navegação</h4>
                 <ul>
                     <li><a href="./index.html">Página Inicial</a></li>
@@ -119,9 +108,9 @@
                     <li><a href="./doacao.html">Doação</a></li>
                 </ul>
             </article>
-        </section>
+        </div>
 
-        <div class="footer-copy">
+        <div>
             <small>&copy; 2025 ONG Verde Esperança. Todos os direitos reservados.</small>
         </div>
     </footer>

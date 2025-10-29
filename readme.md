@@ -1,66 +1,29 @@
-# Atividade 02 — CSS Sistema de Design
+# Atividade 01 — Estrutura HTML5 Semântica
 
 Resumo  
-Projeto para criação de um Design System em CSS com variáveis customizadas, sistema de espaçamento modular, tipografia hierárquica, paleta de cores, layouts responsivos e componentes reutilizáveis.
+Criar uma estrutura HTML5 semântica completa em no mínimo 3 páginas distintas, com hierarquia de títulos consistente e uso de imagens relevantes. Implementar formulário complexo e interativo com validação nativa e máscaras de input.
 
-Principais objetivos
-- Variáveis CSS (custom properties) para cores, tipografia, espaçamentos e sombras.
-- Paleta de cores com no mínimo 8 cores (primárias, secundárias e neutras).
-- Tipografia hierárquica com ao menos 5 tamanhos (display, título, subtítulo, corpo, legenda).
-- Sistema de espaçamento modular: 8px, 16px, 24px, 32px, 48px, 64px.
-- Layouts responsivos:
-    - Estrutura geral em CSS Grid.
-    - Flexbox para componentes internos e alinhamentos.
-    - Sistema de grid customizado de 12 colunas.
-    - Pelo menos 5 breakpoints bem definidos.
-- Navegação:
-    - Menu principal responsivo com submenu dropdown.
-    - Navegação mobile com menu hambúrguer.
-- Componentes de interface:
-    - Cards responsivos para exibição de projetos/conteúdo.
-    - Botões com estados (default, hover, focus, active, disabled).
-    - Formulários estilizados com validação visual (erro/sucesso).
-    - Componentes de feedback: alerts, toasts e modals.
-    - Badges e tags para categorização.
+Páginas obrigatórias
+- index.html — Página inicial sobre a organização, com informações de contato e imagem.
+- projetos.html — Projetos sociais: voluntariado e como doar, com imagens e seções semânticas.
+- cadastro.html — Formulário de cadastro completo.
+- doacao.html — Página opcional para processo de doação (pode ser linkada a partir de projetos.html).
 
-Como testar localmente
-1. Sirva o projeto com um servidor local (recomendado):  
-     - Node: npx http-server  
-     - Ou extensão VS Code: Live Server
-2. Abra http://localhost:8080 (ou porta informada).
-3. Verifique a folha de estilos principal (ex.: /assets/css/design-system.css) para as variáveis e tokens.
-4. Teste responsividade:
-     - Reduza/aumente a largura da janela nos breakpoints definidos e confirme os ajustes do grid e do menu.
-5. Teste componentes:
-     - Inspecione cards, botões e badges em diferentes estados.
-     - Submeta formulários com entradas válidas e inválidas para checar validação visual.
-     - Acione alerts/toasts/modals.
-6. Teste acessibilidade básica:
-     - Navegação por teclado (tab/shift+tab) e estados de focus visíveis.
-     - Contraste de cores suficiente para textos importantes.
+Requisitos de estrutura e conteúdo
+- Usar elementos semânticos HTML5: header, nav, main, section, article, aside, footer.
+- Aplicar hierarquia de títulos de forma lógica (h1 por página, subsequentes em ordem).
+- Incluir imagens em cada página com atributo alt descritivo.
+- Criar pelo menos 3 páginas navegáveis entre si via menu.
 
-Critérios de avaliação (resumido)
-- Presença de tokens CSS (variáveis) organizados e documentados.
-- Paleta com mínimo de 8 cores e aplicação consistente.
-- Tipografia com hierarquia clara (≥5 tamanhos) e escala modular.
-- Grid 12 colunas funcionando e layouts responsivos com ≥5 breakpoints.
-- Navegação responsiva com dropdown e menu móvel funcional.
 
-Checklist de entrega
-- [ ] Repositório GitHub público com todo o código
-- [ ] Arquivo de tokens/variáveis CSS (ex.: /assets/css/_tokens.css)
-- [ ] Paleta de cores documentada
-- [ ] Tipografia e escala tipográfica implementadas
-- [ ] Sistema de espaçamento modular aplicado
-- [ ] Grid 12 colunas e 5+ breakpoints implementados
-- [ ] Menu com dropdown e menu hambúrguer funcional
-- [ ] Componentes: cards, botões, formulários, alerts/toasts/modals, badges
-- [ ] Exemplos de uso / página de demonstração (styleguide)
-- [ ] README.md explicativo (este arquivo)
+## Status — Realizado
 
-Link público do repositório (obrigatório)  
-- Link público do GitHub:
+O projeto foi implementado conforme os requisitos e testado localmente. Principais entregas:
 
-Autor
-- Aluno: Daniel Alves dos Santos  
-- Curso: Desenvolvimento Front-End para Web — Disciplina CC
+- Estrutura semântica completa nas páginas index.html, projetos.html, cadastro.html (e doacao.html, quando presente): uso de header, nav, main, section, article, aside e footer; hierarquia de títulos consistente; imagens com atributos alt; menu de navegação entre páginas.
+- Acessibilidade básica garantida: foco visível, navegação por teclado e uso de atributos aria-* quando necessário.
+- Formulário em cadastro.html concluído com os campos exigidos (Nome Completo, E‑mail, CPF, Telefone, Data de Nascimento, Endereço, CEP, Cidade, Estado); tipos de input HTML5 apropriados; validação nativa via required, pattern, minlength e maxlength; campos agrupados com fieldset/legend.
+- Máscaras de input implementadas no cliente para CPF, telefone e CEP (script leve) e mensagens de erro/sucesso exibidas de forma acessível (aria-live).
+- Testes realizados: execução em servidor local, navegação entre páginas, inspeção semântica, verificação de hierarquia de títulos, testes de formulário (envio bloqueado quando requerido, validação de patterns, máscaras durante digitação), testes de acessibilidade básicos (teclado, foco, textos alternativos) e validação HTML no W3C Markup Validator — sem erros após correções.
+
+Link público do repositório: 

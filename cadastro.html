@@ -1,144 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="ONG Verde Esperança - Cadastro de voluntários e apoiadores. Junte-se a nós na preservação ambiental.">
-    <meta name="author" content="Daniel Alves - https://danieluik.web.app">
-    <meta name="keywords"
-        content="ONG, meio ambiente, sustentabilidade, cadastro, voluntariado, doações, preservação ambiental, projetos sociais">
-    <title>ONG Verde Esperança - Cadastro</title>
-    <link rel="icon" type="image/png" href="./assets/img/logo.png">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro - ONG Verde Esperança</title>
 </head>
-
 <body>
-    <header>
-        <div class="logo-titulo">
-            <img src="./assets/img/logo.png" alt="Logo Verde Esperança">
-            <h1>Verde Esperança</h1>
-        </div>
-        <nav>
+<footer>
+    <section>
+        <h2>Informações</h2>
+
+        <article>
+            <h4>Sobre Nós</h4>
+            <p>
+                A ONG Verde Esperança atua desde 2018 com projetos ambientais, reflorestamento e educação ecológica
+                para comunidades.
+            </p>
+        </article>
+
+        <article>
+            <h4>Contato</h4>
+            <p>Email: <a href="mailto:contato@verdeesperanca.org">contato@verdeesperanca.org</a></p>
+            <p>Telefone: (11) 99999-9999</p>
+            <p>Endereço: Rua das Árvores, 45 - São Paulo/SP</p>
+        </article>
+
+        <article>
+            <h4>Redes Sociais</h4>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+        </article>
+
+        <article>
+            <h4>Navegação</h4>
             <ul>
                 <li><a href="./index.html">Página Inicial</a></li>
                 <li><a href="./projetos.html">Projetos Sociais</a></li>
-                <li><a href="./cadastro.html" class="ativo">Cadastro</a></li>
+                <li><a href="./cadastro.html">Cadastro</a></li>
                 <li><a href="./doacao.html">Doação</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <section class="hero hero-cadastro">
-        <div class="conteudo-hero">
-            <h2>Junte-se à Verde Esperança 🌿</h2>
-            <p>
-                Faça parte da nossa missão de preservar o meio ambiente!
-                Cadastre-se como voluntário ou apoiador e contribua para um futuro mais verde e sustentável.
-            </p>
-        </div>
+        </article>
     </section>
 
-    <main class="main-cadastro">
-        <section class="formulario-cadastro">
-            <h3>Formulário de Cadastro</h3>
-            <form action="#" method="post" enctype="multipart/form-data" autocomplete="on">
-                <fieldset>
-                    <legend>Informações Pessoais</legend>
-
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" required minlength="3" maxlength="100" autocomplete="name">
-
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required autocomplete="email">
-
-                    <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00" maxlength="14">
-
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" required placeholder="(99) 99999-9999"
-                        maxlength="15">
-
-                    <label for="nascimento">Data de Nascimento:</label>
-                    <input type="date" id="nascimento" name="nascimento" required>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Endereço</legend>
-
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" name="endereco" required maxlength="120">
-
-                    <label for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep" required placeholder="00000-000" maxlength="9">
-
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade" required maxlength="50">
-
-                    <label for="estado">Estado:</label>
-                    <select id="estado" name="estado" required>
-                        <option value="">Selecione</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PR">Paraná</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="BA">Bahia</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="CE">Ceará</option>
-                        <option value="GO">Goiás</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="Outros">Outros</option>
-                    </select>
-                </fieldset>
-
-                <button type="submit" class="btn">Enviar Cadastro</button>
-            </form>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <section class="footer-conteudo">
-            <article class="footer-sobre">
-                <h4>Sobre Nós</h4>
-                <p>
-                    A ONG Verde Esperança atua desde 2018 com projetos ambientais, reflorestamento e educação ecológica
-                    para comunidades.
-                </p>
-            </article>
-
-            <article class="footer-contato">
-                <h4>Contato</h4>
-                <p>Email: <a href="mailto:contato@verdeesperanca.org">contato@verdeesperanca.org</a></p>
-                <p>Telefone: (11) 99999-9999</p>
-                <p>Endereço: Rua das Árvores, 45 - São Paulo/SP</p>
-            </article>
-
-            <article class="footer-redes">
-                <h4>Redes Sociais</h4>
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">YouTube</a></li>
-                </ul>
-            </article>
-
-            <article class="footer-links">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="./index.html">Página Inicial</a></li>
-                    <li><a href="./projetos.html">Projetos Sociais</a></li>
-                    <li><a href="./cadastro.html">Cadastro</a></li>
-                    <li><a href="./doacao.html">Doação</a></li>
-                </ul>
-            </article>
-        </section>
-
-        <div class="footer-copy">
-            <small>&copy; 2025 ONG Verde Esperança. Todos os direitos reservados.</small>
-        </div>
-    </footer>
+    <div>
+        <small>&copy; 2025 ONG Verde Esperança. Todos os direitos reservados.</small>
+    </div>
+</footer>
 </body>
-
 </html>
