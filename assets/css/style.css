@@ -1,4 +1,68 @@
 /* ==== GERAL ==== */
+:root {
+    /* Paleta de Cores (8+) */
+    --cor-primaria: #2b7a0b;
+    --cor-primaria-escura: #1d5208;
+    --cor-secundaria: #e69500;
+    --cor-secundaria-escura: #cc8400;
+    --cor-fundo: #f9fafb;
+    --cor-texto: #333;
+    --cor-clara: #ffffff;
+    --cor-destaque: #a8e6a3;
+    --cor-sucesso: #4caf50;
+    --cor-erro: #e53935;
+
+    /* Tipografia */
+    --fonte-principal: "Poppins", sans-serif;
+    --font-xs: 0.75rem;
+    --font-sm: 0.9rem;
+    --font-md: 1rem;
+    --font-lg: 1.3rem;
+    --font-xl: 1.8rem;
+    --font-xxl: 2.5rem;
+
+    --esp-1: 0.5rem;
+    --esp-2: 1rem;
+    --esp-3: 1.5rem;
+    --esp-4: 2rem;
+    --esp-5: 3rem;
+    --esp-6: 4rem;
+
+    --colunas: repeat(12, 1fr);
+    --gap-grid: 1.5rem;
+}
+
+@media (max-width: 1400px) {
+    :root {
+        --font-xl: 2.2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .col-6 {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --font-lg: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --font-md: 0.9rem;
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +70,31 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--fonte-principal);
     line-height: 1.6;
-    background-color: #f9fafb;
-    color: #333;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
 /* ==== CABEÇALHO ==== */
@@ -20,7 +102,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #ffffffc9;
+    background: var(--cor-clara);
     backdrop-filter: blur(8px);
     padding: 0.8rem 2.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -44,7 +126,7 @@ header img {
 
 header h1 {
     font-size: 1.8rem;
-    color: #2b7a0b;
+    color: var(--cor-primaria);
     font-weight: 700;
     margin: 0;
 }
@@ -58,40 +140,40 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #2b7a0b;
+    color: var(--cor-primaria);
     font-weight: 600;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #1d5208;
+    color: var(--cor-primaria-escura);
 }
 
 
 /* ==== HERO ==== */
 .hero {
     text-align: center;
-    padding: 8rem 1rem;
-    background: linear-gradient(to bottom, #a8e6a3, #e6f5e6);
+    padding: 15rem 1rem;
+    background: linear-gradient(to bottom, var(--cor-destaque), var(--cor-fundo));
 }
 
 .hero h2 {
     font-size: 2rem;
-    color: #1b5e20;
+    color: var(--cor-primaria-escura);
 }
 
 .hero p {
     margin-top: 0.5rem;
     font-size: 1.1rem;
-    color: #333;
+    color: var(--cor-texto);
 }
 
 .btn {
     display: inline-block;
     margin-top: 1.5rem;
-    background: #2b7a0b;
-    color: white;
+    background: var(--cor-primaria);
+    color: var(--cor-clara);
     padding: 0.7rem 1.4rem;
     border-radius: 6px;
     text-decoration: none;
@@ -100,7 +182,7 @@ nav a:hover {
 }
 
 .btn:hover {
-    background: #1d5208;
+    background: var(--cor-primaria-escura);
 }
 
 /* ==== CONTEÚDO PRINCIPAL ==== */
@@ -112,9 +194,9 @@ main {
     text-align: center;
 }
 
-main h3, 
+main h3,
 main h1 {
-    color: #2b7a0b;
+    color: var(--cor-primaria);
     margin-bottom: 1rem;
 }
 
@@ -128,7 +210,7 @@ main h1 {
 }
 
 .card {
-    background: white;
+    background: var(--cor-clara);
     border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     padding: 1.5rem;
@@ -149,7 +231,7 @@ main h1 {
 }
 
 .card h4 {
-    color: #2b7a0b;
+    color: var(--cor-primaria);
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
@@ -160,7 +242,7 @@ main h1 {
 
 /* ==== SOBRE NÓS ==== */
 .sobre-nos {
-    background: linear-gradient(to right, #e6f5e6, #f9fafb);
+    background: linear-gradient(to right, var(--cor-destaque), var(--cor-fundo));
     border-radius: 12px;
     padding: 3rem 1.5rem;
     margin: 3rem auto;
@@ -170,14 +252,14 @@ main h1 {
 }
 
 .sobre-nos h3 {
-    color: #2b7a0b;
+    color: var(--cor-primaria);
     font-size: 1.7rem;
     margin-bottom: 1.2rem;
 }
 
 .sobre-nos .conteudo-sobre p {
     font-size: 1.05rem;
-    color: #333;
+    color: var(--cor-texto);
     line-height: 1.8;
     max-width: 750px;
     margin: 0 auto;
@@ -194,7 +276,7 @@ main h1 {
 }
 
 .projeto {
-    background: white;
+    background: var(--cor-clara);
     border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     width: 300px;
@@ -217,7 +299,7 @@ main h1 {
 
 .projeto h2 {
     margin-top: 0.8rem;
-    color: #2b7a0b;
+    color: var(--cor-primaria);
     font-size: 1.3rem;
 }
 
@@ -229,8 +311,8 @@ main h1 {
 .btn-voluntario {
     display: inline-block;
     margin-top: 2rem;
-    background: #2b7a0b;
-    color: white;
+    background: var(--cor-primaria);
+    color: var(--cor-clara);
     padding: 0.8rem 1.6rem;
     border-radius: 8px;
     text-decoration: none;
@@ -239,14 +321,14 @@ main h1 {
 }
 
 .btn-voluntario:hover {
-    background: #1d5208;
+    background: var(--cor-primaria-escura);
     transform: scale(1.05);
 }
 
 /* ==== FOOTER ==== */
 .footer {
-    background-color: #1b3d1f;
-    color: #f2f2f2;
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-clara);
     padding: 3rem 1.5rem 1rem;
     text-align: center;
 }
@@ -265,7 +347,7 @@ main h1 {
 }
 
 .footer h4 {
-    color: #a5d6a7;
+    color: var(--cor-destaque);
     font-size: 1.2rem;
     margin-bottom: 0.8rem;
 }
@@ -273,15 +355,16 @@ main h1 {
 .footer p {
     line-height: 1.6;
     font-size: 0.95rem;
+    color: var(--cor-clara);
 }
 
 .footer a {
-    color: #c8e6c9;
+    color: var(--cor-destaque);
     text-decoration: none;
 }
 
 .footer a:hover {
-    color: #81c784;
+    color: var(--cor-primaria);
 }
 
 .footer ul {
@@ -295,7 +378,7 @@ main h1 {
 }
 
 .footer-copy {
-    border-top: 1px solid #2e7d32;
+    border-top: 1px solid var(--cor-primaria);
     padding-top: 1rem;
     font-size: 0.85rem;
     color: #bdbdbd;
@@ -326,23 +409,25 @@ main h1 {
         justify-content: center;
     }
 
-    .projetos-lista, .cards {
+    .projetos-lista,
+    .cards {
         flex-direction: column;
         align-items: center;
     }
 
-    .projeto, .card {
+    .projeto,
+    .card {
         width: 90%;
     }
 }
 
 /* ==== DOAÇÃO CHAMADA ==== */
 .doacao-chamada {
-    background: linear-gradient(to right, #fff7e6, #fff);
+    background: linear-gradient(to right, var(--cor-clara), var(--cor-fundo));
     padding: 4rem 1.5rem;
     text-align: center;
-    border-top: 2px solid #ffcc80;
-    border-bottom: 2px solid #ffcc80;
+    border-top: 2px solid var(--cor-secundaria-escura);
+    border-bottom: 2px solid var(--cor-secundaria-escura);
     margin-top: 3rem;
 }
 
@@ -352,7 +437,7 @@ main h1 {
 }
 
 .doacao-chamada h3 {
-    color: #e69500;
+    color: var(--cor-secundaria);
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
@@ -365,8 +450,8 @@ main h1 {
 }
 
 .btn-doacao {
-    background-color: #e69500;
-    color: #fff;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-clara);
     padding: 0.9rem 2rem;
     text-decoration: none;
     border-radius: 8px;
@@ -375,170 +460,171 @@ main h1 {
 }
 
 .btn-doacao:hover {
-    background-color: #cc8400;
+    background-color: var(--cor-secundaria-escura);
 }
 
 
 
 /* ==== DOAÇÃO ==== */
 .doacao-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 4rem auto;
-  padding: 2rem;
-  background: #f9fdf9;
-  border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: var(--cor-fundo);
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
 }
 
 .doacao-container h3 {
-  color: #2b7a0b;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
 }
 
 .valores-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .valor-btn {
-  background: #2b7a0b;
-  border: 2px solid #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    background: var(--cor-primaria);
+    border: 2px solid var(--cor-clara);
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--cor-clara);
 }
 
 .valor-btn:hover,
 .valor-btn.ativo {
-  background: #e69500;
-  color: #fff;
-  border-color: #fff;
+    background: var(--cor-secundaria);
+    color: var(--cor-clara);
+    border-color: var(--cor-clara);
 }
 
 .outro-valor {
-  display: none;
-  width: 100%;
-  padding: 0.8rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 1rem;
+    display: none;
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
 }
 
 .transparencia {
-  color: #555;
-  font-size: 0.95rem;
+    color: #555;
+    font-size: 0.95rem;
 }
 
 .transparencia .link-verde {
-  color: #2b7a0b;
-  font-weight: 600;
-  text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .doacao-form form {
-  background: linear-gradient(to right, #fff7e6, #fff);
-  color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    background: linear-gradient(to right, var(--cor-clara), var(--cor-fundo));
+    color: var(--cor-texto);
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .doacao-form label {
-  font-weight: 600;
-  color: #636363;
+    font-weight: 600;
+    color: #636363;
 }
 
 .doacao-form input,
 .doacao-form select {
-  padding: 0.8rem;
-  border: 1px solid #555;
-  border-radius: 8px;
-  background: #ffe1b3;
-  color: #5c5c5c;
+    padding: 0.8rem;
+    border: 1px solid var(--cor-primaria-escura);
+    border-radius: 8px;
+    background: #ffe1b3;
+    color: #5c5c5c;
 }
 
 .btn-verde {
-  background: #2b7a0b;
-  color: #fff;
-  border: none;
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.3s;
+    background: var(--cor-primaria);
+    color: var(--cor-clara);
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn-verde:hover {
-  background: #256908;
+    background: var(--cor-primaria-escura);
 }
 
 .seguro {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #aaa;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
 }
 
 /* Modal */
 .modal {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
 }
 
 .modal-content {
-  background: #fff;
-  border-radius: 10px;
-  max-width: 500px;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
+    background: var(--cor-clara);
+    border-radius: 10px;
+    max-width: 500px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
 }
 
 .modal-content .fechar {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #666;
-  transition: 0.3s;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #666;
+    transition: 0.3s;
 }
 
 .modal-content .fechar:hover {
-  color: #000;
+    color: #000;
 }
 
 .modal-content h2 {
-  margin-top: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 
 @media (max-width: 900px) {
-  .doacao-container {
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
-  }
+    .doacao-container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
 }
 
 
@@ -549,11 +635,11 @@ section.cadastro {
     justify-content: center;
     align-items: center;
     padding: 5rem 2rem;
-    background: linear-gradient(to right, #f3faf3, #ffffff);
+    background: linear-gradient(to right, var(--cor-fundo), var(--cor-clara));
 }
 
 form {
-    background: #fff;
+    background: var(--cor-clara);
     padding: 3rem 4rem;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -573,7 +659,7 @@ fieldset {
 }
 
 legend {
-    color: #2b7a0b;
+    color: var(--cor-primaria);
     font-weight: 600;
     padding: 0 0.5rem;
     font-size: 1.1rem;
@@ -582,7 +668,7 @@ legend {
 label {
     display: block;
     font-weight: 600;
-    color: #333;
+    color: var(--cor-texto);
     margin-top: 1rem;
     margin-bottom: 0.4rem;
     font-size: 1rem;
@@ -603,13 +689,13 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #2b7a0b;
+    border-color: var(--cor-primaria);
     outline: none;
 }
 
 button {
-    background: #2b7a0b;
-    color: #fff;
+    background: var(--cor-primaria);
+    color: var(--cor-clara);
     border: none;
     padding: 1rem;
     border-radius: 8px;
@@ -620,7 +706,7 @@ button {
 }
 
 button:hover {
-    background: #226307;
+    background: var(--cor-primaria-escura);
 }
 
 /* ==== Responsividade ==== */
