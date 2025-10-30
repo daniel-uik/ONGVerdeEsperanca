@@ -21,20 +21,18 @@
             <h1>Verde Esperança</h1>
         </div>
 
-        <div class="hamburguer" id="hamburguer">
+        <nav class="menu">
+            <li><a href="./index.html" class="ativo">Página Inicial</a></li>
+            <li><a href="./projetos.html">Projetos Sociais</a></li>
+            <li><a href="./cadastro.html">Cadastro</a></li>
+            <li><a href="./doacao.html">Doação</a></li>
+        </nav>
+
+        <div class="hamburguer" id="btnMenu">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
-        <nav id="menu">
-            <ul>
-                <li><a href="./index.html" class="ativo">Página Inicial</a></li>
-                <li><a href="./projetos.html">Projetos Sociais</a></li>
-                <li><a href="./cadastro.html">Cadastro</a></li>
-                <li><a href="./doacao.html">Doação</a></li>
-            </ul>
-        </nav>
     </header>
 
 
@@ -154,19 +152,20 @@
     </footer>
 
     <script>
-        const hamburguer = document.getElementById('hamburguer');
-        const menu = document.getElementById('menu');
+        const btnMenu = document.getElementById('btnMenu');
+        const menu = document.querySelector('.menu');
 
-        hamburguer.addEventListener('click', () => {
-            hamburguer.classList.toggle('ativo');
+        btnMenu.addEventListener('click', () => {
             menu.classList.toggle('ativo');
         });
 
-        document.querySelectorAll('#menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburguer.classList.remove('ativo');
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
                 menu.classList.remove('ativo');
-            });
+                menu.style.display = 'flex';
+            } else {
+                menu.style.display = '';
+            }
         });
     </script>
 

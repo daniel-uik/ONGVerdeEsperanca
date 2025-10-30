@@ -17,14 +17,19 @@
             <img src="./assets/img/logo.png" alt="Logo Verde Esperança">
             <h1>Verde Esperança</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Página Inicial</a></li>
-                <li><a href="./projetos.html">Projetos Sociais</a></li>
-                <li><a href="./cadastro.html">Cadastro</a></li>
-                <li><a href="./doacao.html" class="ativo">Doação</a></li>
-            </ul>
+
+        <nav class="menu">
+            <li><a href="./index.html">Página Inicial</a></li>
+            <li><a href="./projetos.html">Projetos Sociais</a></li>
+            <li><a href="./cadastro.html">Cadastro</a></li>
+            <li><a href="./doacao.html" class="ativo">Doação</a></li>
         </nav>
+
+        <div class="hamburguer" id="btnMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <section class="hero hero-doacao">
@@ -48,7 +53,8 @@
                 <input type="number" id="outroValor" placeholder="R$ 0,00" class="outro-valor" />
                 <p class="transparencia">💚 100% transparente — acompanhe o destino da sua doação no nosso <a href="#"
                         class="link-verde">Portal de Transparência</a>.</p>
-                <img src="./assets/img/doacao.jpg" alt="Selo de Transparência" class="selo-transparencia" style="display:block; width:320px; max-width:100%; margin:16px auto 0;">
+                <img src="./assets/img/doacao.jpg" alt="Selo de Transparência" class="selo-transparencia"
+                    style="display:block; width:320px; max-width:100%; margin:16px auto 0;">
             </div>
 
             <div class="doacao-form">
@@ -125,6 +131,25 @@
             <small>&copy; 2025 ONG Verde Esperança. Todos os direitos reservados.</small>
         </div>
     </footer>
+
+    <script>
+        const btnMenu = document.getElementById('btnMenu');
+        const menu = document.querySelector('.menu');
+
+        btnMenu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                menu.classList.remove('ativo');
+                menu.style.display = 'flex';
+            } else {
+                menu.style.display = '';
+            }
+        });
+    </script>
+
 </body>
 
 </html>
