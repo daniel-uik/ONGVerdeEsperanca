@@ -77,20 +77,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-/* ======= GERAL ======= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: #f9fafb;
-  color: #333;
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 /* ======= NAVBAR ======= */
