@@ -1,3 +1,22 @@
+// Menu Script
+
+const btnMenu = document.getElementById('btnMenu');
+const menu = document.querySelector('.menu');
+
+btnMenu.addEventListener('click', () => {
+    menu.classList.toggle('ativo');
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        menu.classList.remove('ativo');
+        menu.style.display = 'flex';
+    } else {
+        menu.style.display = '';
+    }
+});
+
+
 // Doação Form Script
 
 document.addEventListener('DOMContentLoaded', () => {
