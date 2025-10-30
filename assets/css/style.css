@@ -77,7 +77,110 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
+
+/* ======= NAVBAR ======= */
+header {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #1e7b1e;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* ======= MENU ======= */
+.menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  transition: color 0.3s ease;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--cor-primaria-escura);
+}
+
+/* ======= BOTÃO HAMBURGUER ======= */
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburguer span {
+  width: 25px;
+  height: 3px;
+  background: var(--cor-primaria-escura);
+  border-radius: 2px;
+}
+
+/* ======= MOBILE ======= */
+@media (max-width: 768px) {
+  .hamburguer {
+    display: flex;
+  }
+
+  .menu {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #fff;
+    width: 200px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 0 10px;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  .menu.ativo {
+    display: flex;
+  }
+}
+
+/* ======= DESKTOP ======= */
+@media (min-width: 769px) {
+  .menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+  }
+}
+
+
 
 
 /* ==== CABEÇALHO ==== */
@@ -132,7 +235,6 @@ nav a {
 nav a:hover {
     color: var(--cor-primaria-escura);
 }
-
 
 /* ==== HERO ==== */
 .hero {
