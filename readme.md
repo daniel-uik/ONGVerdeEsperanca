@@ -39,7 +39,7 @@ Checklist de entrega
 - [ ] README.md informativo (este arquivo)
 
 Link público do repositório (obrigatório)
-- Link público do GitHub: 
+- Link público do GitHub: https://github.com/daniel-uik/ONGVerdeEsperanca/tree/03-ATIVIDADE
 
 Autor
 - Aluno: Daniel Alves dos Santos
